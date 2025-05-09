@@ -1,6 +1,6 @@
-module github.com/douglas-larocca/glamour
+module github.com/charmbracelet/glamour
 
-replace github.com/charmbracelet/glow/v2 => github.com/douglas-larocca/glow/v2 master 
+replace github.com/charmbracelet/glamour => github.com/douglas-larocca/glamour v0.0.0-20250509050620-4cfc379f4a00
 
 go 1.23.0
 
@@ -29,6 +29,7 @@ require (
 	github.com/charmbracelet/x/cellbuf v0.0.13 // indirect
 	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
+	github.com/douglas-larocca/glamour v0.0.0-20250509050620-4cfc379f4a00 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect

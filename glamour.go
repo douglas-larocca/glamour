@@ -230,6 +230,13 @@ func WithEmoji() TermRendererOption {
 	}
 }
 
+func WithChromaStyleTheme(theme string) TermRendererOption {
+	return func(tr *TermRenderer) error {
+		tr.ansiOptions.ChromaStyleTheme = theme
+		return nil
+	}
+}
+
 // WithChromaFormatter sets a TermRenderer's chroma formatter used for code blocks.
 func WithChromaFormatter(formatter string) TermRendererOption {
 	return func(tr *TermRenderer) error {

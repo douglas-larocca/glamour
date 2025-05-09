@@ -14,7 +14,7 @@ import (
 
 const (
 	// The chroma style theme name used for rendering.
-	chromaStyleTheme = "charm"
+	chromaStyleTheme = "doom-one2"
 
 	// The chroma formatter name used for rendering.
 	chromaFormatter = "terminal256"
@@ -70,6 +70,7 @@ func (e *CodeBlockElement) Render(w io.Writer, ctx RenderContext) error {
 
 	var indentation uint
 	var margin uint
+	theme := chromaStyleTheme
 	formatter := chromaFormatter
 	rules := ctx.options.Styles.CodeBlock
 	if rules.Indent != nil {
@@ -81,10 +82,15 @@ func (e *CodeBlockElement) Render(w io.Writer, ctx RenderContext) error {
 	if len(ctx.options.ChromaFormatter) > 0 {
 		formatter = ctx.options.ChromaFormatter
 	}
-	theme := rules.Theme
+	if len(rules.Theme) > 0 {
+		theme = rules.Theme
+	}
+	if len(ctx.options.ChromaStyleTheme) > 0 {
+		theme = ctx.options.ChromaStyleTheme
+	}
 
 	if rules.Chroma != nil && ctx.options.ColorProfile != termenv.Ascii {
-		theme = chromaStyleTheme
+		// theme = chromaStyleTheme
 		mutex.Lock()
 		// Don't register the style if it's already registered.
 		_, ok := styles.Registry[theme]
