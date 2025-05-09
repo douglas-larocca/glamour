@@ -1,5 +1,7 @@
 module github.com/douglas-larocca/glamour
 
+replace github.com/charmbracelet/glow/v2 => github.com/douglas-larocca/glow/v2 master 
+
 go 1.23.0
 
 toolchain go1.23.7
