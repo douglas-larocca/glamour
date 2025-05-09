@@ -1,6 +1,6 @@
 module github.com/douglas-larocca/glamour
 
-replace github.com/charmbracelet/glamour => ./
+replace github.com/charmbracelet/glamour => github.com/douglas-larocca/glamour v0.0.0-20250509070157-bd657e84a16c
 
 go 1.23.0
 
