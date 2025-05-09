@@ -1,6 +1,6 @@
-module github.com/charmbracelet/glamour
+module github.com/douglas-larocca/glamour
 
-replace github.com/charmbracelet/glamour => github.com/douglas-larocca/glamour v0.0.0-20250509050620-4cfc379f4a00
+replace github.com/charmbracelet/glamour => ./
 
 go 1.23.0
 
@@ -8,6 +8,7 @@ toolchain go1.23.7
 
 require (
 	github.com/alecthomas/chroma/v2 v2.14.0
+	github.com/charmbracelet/glamour v0.0.0-00010101000000-000000000000
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/charmbracelet/x/ansi v0.9.2
 	github.com/charmbracelet/x/exp/golden v0.0.0-20240806155701-69247e0abc2a
@@ -29,9 +30,6 @@ require (
 	github.com/charmbracelet/x/cellbuf v0.0.13 // indirect
 	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
-	github.com/douglas-larocca/glamour v0.0.0-20250509050620-4cfc379f4a00 // indirect
-	github.com/go-enry/go-enry/v2 v2.9.2 // indirect
-	github.com/go-enry/go-oniguruma v1.2.1 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
