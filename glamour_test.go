@@ -286,6 +286,8 @@ func ExampleASCIIStyleConfig() {
 func TestWithChromaFormatterDefault(t *testing.T) {
 	r, err := NewTermRenderer(
 		WithStandardStyle(styles.DarkStyle),
+		WithChromaFormatter("terminal256"),
+		WithChromaStyleTheme("monokai"),
 	)
 	if err != nil {
 		t.Fatal(err)
@@ -307,7 +309,8 @@ func TestWithChromaFormatterDefault(t *testing.T) {
 func TestWithChromaFormatterCustom(t *testing.T) {
 	r, err := NewTermRenderer(
 		WithStandardStyle(styles.DarkStyle),
-		WithChromaFormatter("terminal16"),
+		WithChromaFormatter("terminal256"),
+		WithChromaStyleTheme("native"),
 	)
 	if err != nil {
 		t.Fatal(err)

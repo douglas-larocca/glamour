@@ -30,6 +30,8 @@ require (
 	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/douglas-larocca/glamour v0.0.0-20250509050620-4cfc379f4a00 // indirect
+	github.com/go-enry/go-enry/v2 v2.9.2 // indirect
+	github.com/go-enry/go-oniguruma v1.2.1 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect

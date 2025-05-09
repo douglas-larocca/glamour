@@ -11,6 +11,7 @@ const (
 	defaultListIndent      = 2
 	defaultListLevelIndent = 4
 	defaultMargin          = 2
+	defaultCodeBlockMargin = 0
 )
 
 // Default styles.
@@ -120,7 +121,7 @@ var (
 		},
 		CodeBlock: ansi.StyleCodeBlock{
 			StyleBlock: ansi.StyleBlock{
-				Margin: uintPtr(defaultMargin),
+				Margin: uintPtr(defaultCodeBlockMargin),
 			},
 		},
 		Table: ansi.StyleTable{
@@ -247,7 +248,7 @@ var (
 				StylePrimitive: ansi.StylePrimitive{
 					Color: stringPtr("244"),
 				},
-				Margin: uintPtr(defaultMargin),
+				Margin: uintPtr(defaultCodeBlockMargin),
 			},
 			Chroma: &ansi.Chroma{
 				Text: ansi.StylePrimitive{

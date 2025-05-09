@@ -336,11 +336,13 @@ func (tr *ANSIRenderer) NewElement(node ast.Node, source []byte) Element {
 			line := n.Lines().At(i)
 			s += string(line.Value(source))
 		}
+		lang := string(n.Language(source))
 		return Element{
-			Entering: "\n",
+			Entering: fmt.Sprintf("```%s\n", lang),
+			Exiting:  "```",
 			Renderer: &CodeBlockElement{
 				Code:     s,
-				Language: string(n.Language(source)),
+				Language: lang,
 			},
 		}
 
@@ -353,7 +355,8 @@ func (tr *ANSIRenderer) NewElement(node ast.Node, source []byte) Element {
 			s += string(line.Value(source))
 		}
 		return Element{
-			Entering: "\n",
+			Entering: "```\n",
+			Exiting:  "```",
 			Renderer: &CodeBlockElement{
 				Code: s,
 			},

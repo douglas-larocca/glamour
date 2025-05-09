@@ -14,7 +14,7 @@ import (
 
 const (
 	// The chroma style theme name used for rendering.
-	chromaStyleTheme = "doom-one2"
+	chromaStyleTheme = "monokai"
 
 	// The chroma formatter name used for rendering.
 	chromaFormatter = "terminal256"
